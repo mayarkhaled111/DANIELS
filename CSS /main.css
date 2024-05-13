@@ -1,0 +1,505 @@
+html {
+    scroll-padding-top:48px;
+}
+:root{
+    scroll-behavior: smooth;
+    --paragraph-color: #748182;
+
+}section h2{
+    position: relative;
+    width: fit-content;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 4;
+}
+section h2::after{
+    content: "";
+    width: 100%;
+    height: 30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+}
+/* ************* NAVBAR *************** */
+nav{
+    z-index: 10;
+    box-shadow: -1px -6px 20px 0px rgb(148, 148, 148);
+}
+nav .navbar-brand{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+}
+.navbar-nav .nav-link, .navbar-nav .nav-link:focus{
+    font-family: "Poppins", sans-serif;
+    color: black;
+    font-weight: 400;
+    font-size: 14px;
+    margin-inline: 10px;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+.navbar-nav .nav-link.active::before{
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    width: 80%;
+    height: 2px;
+    background-color: black;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navbar-nav .nav-link::before{
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    left: 8px;
+    transition: .5s;
+}
+
+/* ***************HEADER******************* */
+.header{
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/bg.jpg);
+    background-size:cover;
+    background-position: 0px 0px;
+    background-attachment: fixed;
+}
+.header .text{
+    height: 100vh;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.header .text h1{
+    font-size: 50px;
+    font-weight: 800;
+}
+.header .text p{
+    font-size: 60px;
+    font-weight: 200;
+}
+.header p::after {
+    content: '';
+    font-weight: 400;
+    animation-name: header-animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes header-animation {
+    0% {content: "|";}
+    3% {content: "D|";}
+    5% {content: "De|";}
+    7% {content: "Dev|";}
+    9% {content: "Deve|";}
+    11% {content: "Devel|";}
+    13% {content: "Develo|";}
+    15% {content: "Develop|";}
+    17% {content: "Develope|";}
+    20% {content: "Developer|";}
+    23% {content: "Develope|";}
+    26% {content: "Develop|";}
+    28% {content: "Develo|";}
+    30% {content: "Devel|";}
+    32% {content: "Deve|";}
+    34% {content: "Dev|";}
+    36% {content: "De|";}
+    39% {content: "D|";}
+    42% {content: "De|";}
+    44% {content: "Des|";}
+    46% {content: "Desi|";}
+    47% {content: "Desig|";}
+    50% {content: "Design|";}
+    52% {content: "Designe|";}
+    55% {content: "Designer|";}
+    59% {content: "Designe|";}
+    61% {content: "Design|";}
+    63% {content: "Desig|";}
+    65% {content: "Desi|";}
+    66% {content: "Des|";}
+    68% {content: "De|";}
+    67% {content: "D|";}
+    69% {content: "L|";}
+    70% {content: "La|";}
+    71% {content: "Lar|";}
+    72% {content: "Larr|";}
+    73% {content: "Larry|";}
+    74% {content: "Larry D|";}
+    75% {content: "Larry Da|";}
+    76% {content: "Larry Dan|";}
+    77% {content: "Larry Dani|";}
+    78% {content: "Larry Danie|";}
+    79% {content: "Larry Daniel|";}
+    80% {content: "Larry Daniels|";}
+    81% {content: "Larry Daniel|";}
+    82% {content: "Larry Danie|";}
+    83% {content: "Larry Dani|";}
+    84% {content: "Larry Dan|";}
+    85% {content: "Larry Da|";}
+    86% {content: "Larry D|";}
+    87% {content: "Larr|";}
+    88% {content: "Lar|";}
+    89% {content: "La|";}
+    90% {content: "L|";}
+    91% {content: "|";}
+    92% {content: "D|";}
+    93% {content: "De|";}
+    94% {content: "Dev|";}
+    95% {content: "Deve|";}
+    96% {content: "Devel|";}
+    97% {content: "Develo|";}
+    98% {content: "Develop|";}
+    99% {content: "Develope|";}
+    100% {content: "Developer|";}
+}
+
+header .text ul li{
+    width: 35px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.452);
+}
+/* *****************ABOUT****************** */
+#about .image::after{
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 10px;
+    bottom: -30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+#about .text h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+}
+#about .text h6{
+    font-family: "Poppins", sans-serif;
+    color: #999999;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+#about .text p{
+    font-family: "Poppins", sans-serif;
+    color: var(--paragraph-color);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+}
+#about .text p span{
+    font-size: 15px;
+    font-weight: 700;
+    color: #7B8889;
+}
+#about .text .progress span{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+}
+#about .text button{
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    transition: .5s;
+}
+#about .text button.dark{
+    background-color: black;
+    border-color: #fff;
+    color: #fff;
+}
+#about .text button.dark:hover{
+    background-color: #fff;
+    border-color: black;
+    color: black;
+}
+#about .text button.light:hover{
+    background-color: black;
+    border-color: #fff;
+    color: #fff;
+}
+
+/* *****************SERVICES SECTION**************** */
+#services{
+    background-color: #F7F7F7;
+}
+
+#services .item .ser-item{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px -8px;
+    border-radius: 5px;
+}
+#services .item .ser-item span{
+    width: 70px;
+    height: 70px;
+    background-color: rgb(244, 244, 244);
+    transition: .5s;
+}
+#services .ser-item:hover span{
+    background-color: black;
+    color: white;
+}
+#services .item .ser-item h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+}
+#services .item .ser-item p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--paragraph-color);
+    line-height: 22px;
+}
+
+
+/* *********** WORK ************ */
+.nav-tabs {
+    transition: 1s;
+}
+.nav-tabs li button{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+.nav-tabs .nav-link.active::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: black;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .5s;
+}
+
+.nav-tabs .nav-link.active {
+    position: relative;
+    border-color: transparent;
+    transition: .5s;
+    border-radius: 20px ;
+}
+
+.nav-tabs .nav-link {
+    color: #333;
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: transparent;
+}
+
+#work .item .layer {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: 2;
+    transform: translate(-50%,-50%);
+}
+
+#work .item:hover .layer{
+    opacity: 1;
+}
+#work .item .layer h4{
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: black;
+    transform: translateY(-10px);
+    transition: .5s;
+}
+#work .item:hover .layer h4{
+    transform: translateY(0px);
+}
+#work .item .layer a{
+    color: white;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    transform: translateY(10px);
+    transition: .5s;
+    border: .5px solid rgba(0, 0, 0, 0.758);
+}
+#work .item:hover .layer a{
+    transform: translateY(0px);
+}
+#work .item .layer a:hover{
+    background-color: white;
+    color: black;
+}
+
+
+/* ****************TESTIMONIALS***************** */
+#testimonials{
+    background-color: #F7F7F7;
+}
+#testimonials .carousel .carousel-inner .carousel-item .image{
+    width: 100px;
+    height: 100px;
+}
+#testimonials .carousel .carousel-inner .carousel-item .text p{
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--paragraph-color);
+}
+#testimonials .carousel .carousel-inner .carousel-item .text h6{
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+#testimonials .carousel .carousel-inner .carousel-item .text span{
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--paragraph-color);
+}
+#testimonials .carousel .carousel-indicators button{
+    width: 10px;
+    height: 10px;
+    background-color: #d6d6d6;
+}
+#testimonials .carousel .carousel-indicators button.active{
+    background-color: #869791;
+}
+/* ************* NUMBERS ************** */
+#numbers .item h3{
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+}
+#numbers .item p{
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--paragraph-color);
+}
+
+
+/* *************TEAM************* */
+
+#team{
+    background-color: #F7F7F7;
+}
+#team .image{
+    overflow: hidden;
+}
+#team .image img{
+    transition: .5s;
+}
+#team .image:hover img{
+    transform: scale(1.2);
+}
+#team .image .layer {
+    width: 96%;
+    height: 96%;
+    top: 2%;
+    left: 2%;
+    background-color: rgba(255, 255, 255, 0.968);
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: 2;
+    transform: rotateY(180deg) scale(0.5, 0.5);
+}
+#team .image .layer:hover{
+    cursor: pointer;
+}
+#team .image .layer a{
+    color: white;
+    width: 35px;
+    height: 35px;
+    background-color: black;
+    border: .5px solid rgba(0, 0, 0, 0.758);
+}
+
+#team .image .layer a:hover{
+    background-color: white;
+    color: black;
+}
+#team .card-item .card:hover .layer{
+    opacity: 1;
+    transform: rotateY(0deg) scale(1, 1);
+}
+#team .card-item .card-body{
+    background-color: #5B5B5B;
+
+}
+#team .card-item .card-body h3{
+    font-family: Montserrat, sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+#team .card-item .card-body p{
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* ************CONTACT************** */
+#contact .item .card .icon{
+    width: 70px;
+    height: 70px;
+    background-color: #F4F4F4;
+    transition: .5s;
+}
+#contact .item .card:hover .icon{
+    background-color: #333;
+    color: white;
+}
+#contact .item .card h5{
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+#contact .item .card p{
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--paragraph-color);
+}
+#contact form input,
+#contact form textarea{
+    background-color: #F4F4F4;
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--paragraph-color);
+}
+#contact form .btn{
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+#contact form .btn:hover {
+    color: black;
+    background-color: white;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+#contact form textarea:focus {
+    outline: none;
+}
+/* **********FOOTER*********** */
+#footer{
+    background-color: #1C1C1C;
+}
+#footer p{
+    color: var(--paragraph-color);
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+}
